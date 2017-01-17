@@ -211,7 +211,7 @@ $$\sum\limits_{i=1}^n \left(\frac{O_i - E_i}{\sqrt{E_i}}\right)^2 =
 
 ## measuring the deviation - compared to what?
 
-The expected cell counts $E_i$ are computed *for a given fixed sample size*  $n.$
+The expected cell counts $E_i$ are computed *for a given fixed sample size*  $N.$
 
 \pause So given $n$ along with any of the $n-1$ expected cell counts, we could compute that other expected cell count.
 
@@ -261,8 +261,8 @@ $$H_0: \text{ the probabilities are all the same. }$$
 
 ## goodness of fit as formal hypothesis test - II
 
-Given a sample size $n$ and the null hypothesis probabilities, compute the expected cell counts. In this case:
-$$E_i = np_i = `r nrow(all_numbers)`\cdot\frac{1}{49} = `r round(nrow(all_numbers)/49, 2)`$$
+Given a sample size $N$ and the null hypothesis probabilities, compute the $n$ expected cell counts. In this case:
+$$E_i = Np_i = `r nrow(all_numbers)`\cdot\frac{1}{49} = `r round(nrow(all_numbers)/49, 2)`$$
 
 \pause Compute the *observed value of the test statistic*:
 $$\chi^2_{\text{obs}} = \sum\limits_{i=1}^n \frac{(O_i - E_i)^2}{E_i} = `r round(sum(all_numbers_calc$D_i), 2)`$$
